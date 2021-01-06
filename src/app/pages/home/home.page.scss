@@ -1,0 +1,16 @@
+ion-toolbar {
+  --border-width: 0 !important;
+}
+
+ion-toolbar ion-title {
+  font-family: GothamPro;
+  font-size: 20px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b1b8c5;
+  text-transform: uppercase;
+  padding-left: var(--general-padding-left);
+}

@@ -8,13 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { MessageComponentModule } from '../message/message.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    MessageComponentModule,
-    HomePageRoutingModule
-  ],
+  imports: [CommonModule, FormsModule, IonicModule, MessageComponentModule, HomePageRoutingModule],
   declarations: [HomePage]
 })
 export class HomePageModule {}

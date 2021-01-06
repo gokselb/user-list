@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-view-message',
@@ -10,7 +9,7 @@ import { DataService } from '../../services/data.service';
 export class ViewMessagePage implements OnInit {
   public message: any;
 
-  constructor(private data: DataService, private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');

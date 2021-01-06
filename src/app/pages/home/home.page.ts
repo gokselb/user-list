@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { User } from 'src/app/models';
+import { UserHttpService } from 'src/app/services';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,10 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  constructor(private data: DataService) {}
+  public users: User[];
+  constructor(private userService: UserHttpService) {
+    this.getMessages();
+  }
 
   refresh(ev) {
     setTimeout(() => {
@@ -15,7 +19,9 @@ export class HomePage {
     }, 3000);
   }
 
-  getMessages(): any[] {
-    return [];
+  getMessages(): void {
+    this.userService.getAll().subscribe(result  =>  {
+      this.users = result as any;
+    });
   }
 }

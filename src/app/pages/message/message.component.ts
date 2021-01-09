@@ -8,7 +8,7 @@ import { User } from './../../models';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
-  @Input() message: User;
+  @Input() user: User;
 
   constructor() {}
 

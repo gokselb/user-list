@@ -1,4 +1,5 @@
 import { LoginInfo } from './login-info.model';
+import { Location } from './location.model';
 
 interface Name {
   title: string;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from 'src/app/models';
-import { UserHttpService } from 'src/app/services';
+import { User } from '../../models';
+import { UserService } from '../../services';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,7 @@ import { UserHttpService } from 'src/app/services';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  public users: User[];
-  constructor(private userService: UserHttpService) {
+  constructor(public userService: UserService) {
     this.getMessages();
   }
 
@@ -20,8 +19,6 @@ export class HomePage {
   }
 
   getMessages(): void {
-    this.userService.getAll().subscribe(result  =>  {
-      this.users = result as any;
-    });
+    this.userService.startReceivingUsers();
   }
 }

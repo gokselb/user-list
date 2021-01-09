@@ -14,7 +14,7 @@ interface DateWithAge {
 
 interface NameValue {
   name: string;
-  value: any;
+  value: string;
 }
 
 interface Picture {

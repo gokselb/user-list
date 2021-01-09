@@ -1,4 +1,4 @@
-<ion-item *ngIf="user" [routerLink]="'/user/' + user.id.value" [detail]="false">
+<ion-item *ngIf="user" [routerLink]="'/user'" (click)="this.userSelected()" [detail]="false">
   <ion-thumbnail slot="start">
     <img class="thumbnail-image" [src]="user.picture.thumbnail" alt="">
   </ion-thumbnail>

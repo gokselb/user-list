@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'user/:id',
+    path: 'user',
     loadChildren: () => import('./pages/view-message/view-message.module').then(m => m.ViewMessagePageModule)
   },
   {
